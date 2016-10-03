@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[-----------------------------Test Started<br>]]>
+    </line>
+    <line>
+      <![CDATA[-------Test Started------<br>]]>
+    </line>
+    <line>
+      <![CDATA[Opening Sears Home Page with
+Url: http://www.sears.com<br>]]>
+    </line>
+    <line>
+      <![CDATA[NavigateToUSSite link was clicked<br>]]>
+    </line>
+    <line>
+      <![CDATA[Searched for refrigerators<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 60412 18 cu. ft. Top Freezer Refrigerator w/ Wire Shelves - White<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 50023 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 70413 27.6 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 69313 19 cu. ft. Bottom-Freezer Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 70343 27.2 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 41153 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 60302 14.8 cu. ft. Top Freezer Refrigerator - White<br>]]>
+    </line>
+    <line>
+      <![CDATA[Kenmore 76393 10.7 cu. ft. Top-Freezer Refrigerator w/ Humidity-Controlled Crisper - Stainless<br>]]>
+    </line>
+    <line>
+      <![CDATA[-----------------------------Test Ended<br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="268936" started-at="2016-10-01T20:05:29Z" finished-at="2016-10-01T20:09:58Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="268936" started-at="2016-10-01T20:05:29Z" finished-at="2016-10-01T20:09:58Z">
+      <class name="com.sears.tests.SampleTests">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.sears.tests.SampleTests@d072a9]" name="setup" is-config="true" duration-ms="6191" started-at="2016-10-02T01:35:29Z" finished-at="2016-10-02T01:35:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[-----------------------------Test Started<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="sampleTestOne()[pri:0, instance:com.sears.tests.SampleTests@d072a9]" name="sampleTestOne" duration-ms="259344" started-at="2016-10-02T01:35:35Z" finished-at="2016-10-02T01:39:55Z">
+          <reporter-output>
+            <line>
+              <![CDATA[-------Test Started------<br>]]>
+            </line>
+            <line>
+              <![CDATA[Opening Sears Home Page with
+Url: http://www.sears.com<br>]]>
+            </line>
+            <line>
+              <![CDATA[NavigateToUSSite link was clicked<br>]]>
+            </line>
+            <line>
+              <![CDATA[Searched for refrigerators<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 60412 18 cu. ft. Top Freezer Refrigerator w/ Wire Shelves - White<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 50023 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 70413 27.6 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 69313 19 cu. ft. Bottom-Freezer Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 70343 27.2 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 41153 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 60302 14.8 cu. ft. Top Freezer Refrigerator - White<br>]]>
+            </line>
+            <line>
+              <![CDATA[Kenmore 76393 10.7 cu. ft. Top-Freezer Refrigerator w/ Humidity-Controlled Crisper - Stainless<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sampleTestOne -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.sears.tests.SampleTests@d072a9]" name="close" is-config="true" duration-ms="3383" started-at="2016-10-02T01:39:55Z" finished-at="2016-10-02T01:39:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[-----------------------------Test Ended<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.sears.tests.SampleTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
