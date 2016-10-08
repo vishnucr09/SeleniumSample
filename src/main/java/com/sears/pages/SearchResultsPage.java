@@ -39,7 +39,8 @@ public class SearchResultsPage extends BasePage{
 		Iterator<WebElement> Iterator = itemList.iterator(); 
 		while(Iterator.hasNext()){
 			WebElement elementOne = Iterator.next();
-			Logger.log(elementOne.getText());
+			//Logger.log(elementOne.getText());
+			Assert.assertEquals(searchedProduct, elementOne.getText(), "The search results not matched");
 		}
 	}
 
