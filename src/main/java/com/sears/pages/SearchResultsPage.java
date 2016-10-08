@@ -40,7 +40,9 @@ public class SearchResultsPage extends BasePage{
 		while(Iterator.hasNext()){
 			WebElement elementOne = Iterator.next();
 			//Logger.log(elementOne.getText());
-			Assert.assertEquals(searchedProduct, elementOne.getText(), "The search results not matched");
+			//Assert.assertEquals(elementOne.getText().compareTo(searchedProduct), searchedProduct, "The search results not matched");
+			Assert.assertTrue(elementOne.getText().contains(searchedProduct), "SearchProducts are not displayed as expected");
+			
 		}
 	}
 
