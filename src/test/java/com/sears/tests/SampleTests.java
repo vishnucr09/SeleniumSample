@@ -15,7 +15,7 @@ public class SampleTests extends BaseTest {
 		Logger.log("-------Test Started------");
 		this.gotoSearsHomePage();
 		HomePage.NavigateToUSSite();
-		SearchResultsPage SearchResultsPage = HomePage.searchFor("refrigerators");
+		SearchResultsPage SearchResultsPage = HomePage.searchFor("Refrigerator");
 		SearchResultsPage.validateSearchUrl();
 		SearchResultsPage.validateSearchResults();
 	}
