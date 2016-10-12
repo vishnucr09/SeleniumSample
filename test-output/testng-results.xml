@@ -15,10 +15,31 @@ Url: http://www.sears.com<br>]]>
       <![CDATA[NavigateToUSSite link was clicked<br>]]>
     </line>
     <line>
-      <![CDATA[SignIn button was clicked<br>]]>
+      <![CDATA[Searched for Refrigerator<br>]]>
     </line>
     <line>
-      <![CDATA[Login Modal wasn't closed<br>]]>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 50023 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 70413 27.6 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 69313 19 cu. ft. Bottom-Freezer Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 70343 27.2 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 41153 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 72003 22.1 cu. ft. French Door Bottom-Freezer Refrigerator w/Internal Dispenser - Stainless Steel<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 60419 18 cu. ft. Top Freezer Refrigerator w/ Wire Shelves - Black<br>]]>
+    </line>
+    <line>
+      <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 60082 20.4 cu. ft. Top Freezer Refrigerator - White<br>]]>
     </line>
     <line>
       <![CDATA[-------Test Ended------<br>]]>
@@ -27,19 +48,19 @@ Url: http://www.sears.com<br>]]>
       <![CDATA[-----------------------------Test Ended<br>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46825" started-at="2016-10-12T14:49:22Z" finished-at="2016-10-12T14:50:09Z">
+  <suite name="Default suite" duration-ms="59562" started-at="2016-10-12T17:17:53Z" finished-at="2016-10-12T17:18:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46825" started-at="2016-10-12T14:49:22Z" finished-at="2016-10-12T14:50:09Z">
+    <test name="Default test" duration-ms="59562" started-at="2016-10-12T17:17:53Z" finished-at="2016-10-12T17:18:52Z">
       <class name="com.sears.tests.SampleTests">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.sears.tests.SampleTests@42a311]" name="setup" is-config="true" duration-ms="4332" started-at="2016-10-12T20:19:22Z" finished-at="2016-10-12T20:19:26Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.sears.tests.SampleTests@19963d8]" name="setup" is-config="true" duration-ms="4325" started-at="2016-10-12T22:47:53Z" finished-at="2016-10-12T22:47:57Z">
           <reporter-output>
             <line>
               <![CDATA[-----------------------------Test Started<br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:com.sears.tests.SampleTests@42a311]" name="LoginTest" duration-ms="39243" started-at="2016-10-12T20:19:26Z" finished-at="2016-10-12T20:20:06Z">
+        <test-method status="PASS" signature="searchResultsValidations()[pri:0, instance:com.sears.tests.SampleTests@19963d8]" name="searchResultsValidations" duration-ms="51704" started-at="2016-10-12T22:47:57Z" finished-at="2016-10-12T22:48:49Z">
           <reporter-output>
             <line>
               <![CDATA[-------Test Started------<br>]]>
@@ -52,17 +73,38 @@ Url: http://www.sears.com<br>]]>
               <![CDATA[NavigateToUSSite link was clicked<br>]]>
             </line>
             <line>
-              <![CDATA[SignIn button was clicked<br>]]>
+              <![CDATA[Searched for Refrigerator<br>]]>
             </line>
             <line>
-              <![CDATA[Login Modal wasn't closed<br>]]>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 50023 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 70413 27.6 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 69313 19 cu. ft. Bottom-Freezer Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 70343 27.2 cu. ft. French Door Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 41153 25 cu. ft. Side-by-Side Refrigerator - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 72003 22.1 cu. ft. French Door Bottom-Freezer Refrigerator w/Internal Dispenser - Stainless Steel<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 60419 18 cu. ft. Top Freezer Refrigerator w/ Wire Shelves - Black<br>]]>
+            </line>
+            <line>
+              <![CDATA[Search Results Matched!! Search term: Refrigerator was found in the product title: Kenmore 60082 20.4 cu. ft. Top Freezer Refrigerator - White<br>]]>
             </line>
             <line>
               <![CDATA[-------Test Ended------<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.sears.tests.SampleTests@42a311]" name="close" is-config="true" duration-ms="3214" started-at="2016-10-12T20:20:06Z" finished-at="2016-10-12T20:20:09Z">
+        </test-method> <!-- searchResultsValidations -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.sears.tests.SampleTests@19963d8]" name="close" is-config="true" duration-ms="3502" started-at="2016-10-12T22:48:49Z" finished-at="2016-10-12T22:48:52Z">
           <reporter-output>
             <line>
               <![CDATA[-----------------------------Test Ended<br>]]>

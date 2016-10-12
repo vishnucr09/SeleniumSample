@@ -5,7 +5,7 @@
     <classes>
       <class name="com.sears.tests.SampleTests">
         <methods>
-          <include name="LoginTest"/>
+          <include name="searchResultsValidations"/>
         </methods>
       </class> <!-- com.sears.tests.SampleTests -->
     </classes>
