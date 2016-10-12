@@ -1,8 +1,10 @@
 package com.sears.webdriver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -20,11 +22,11 @@ public abstract class BaseTest{
 	}
 	
 	public WebDriver getWebDriver(){
-		String driverPath = "D:/Vishnu_Selenium/";
+		String driverPathForFirefoxDriver = "D:/Vishnu_Selenium/";
 		String driverPathForChromeDriver = "D:/Vishnu_Selenium/chromedriver_win32/";
 		String browser = PropertiesUtil.getProperty("Browser");
 		if(browser.equals("FireFox")){
-			System.setProperty("webdriver.gecko.driver", driverPath+"geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", driverPathForFirefoxDriver+"geckodriver.exe");
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			Logger.log(PropertiesUtil.getProperty("Browser")+" browser was choose and opened");

@@ -10,14 +10,22 @@ import com.sears.webdriver.BaseTest;
 public class SampleTests extends BaseTest {
 	
 	@Test
-	public void sampleTestOne(){
-		HomePage HomePage = new HomePage(this.driver);
+	public void searchResultsValidations(){
 		Logger.log("-------Test Started------");
 		this.gotoSearsHomePage();
-		HomePage.NavigateToUSSite();
+		HomePage HomePage = new HomePage(this.driver);
 		SearchResultsPage SearchResultsPage = HomePage.searchFor("Refrigerator");
 		SearchResultsPage.validateSearchUrl();
 		SearchResultsPage.validateSearchResults();
+		Logger.log("-------Test Ended------");
 	}
-
+	
+	@Test
+	public void LoginTest(){
+		Logger.log("-------Test Started------");
+		this.gotoSearsHomePage();
+		HomePage HomePage = new HomePage(this.driver);
+		HomePage.SignIn("searstest999@automation.com", "password");
+		Logger.log("-------Test Ended------");
+	}
 }

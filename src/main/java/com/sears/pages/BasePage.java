@@ -1,14 +1,18 @@
 package com.sears.pages;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
 import com.google.common.base.Function;
-
+import com.sears.logger.Logger;
 import com.sears.utils.PropertiesUtil;
 
 public class BasePage {
@@ -35,6 +39,27 @@ public class BasePage {
 		return element;
 
 	}
+	
+	public void waitForElement(WebDriver driver, WebElement WebElement){
+		this.driver = driver;
+		WebDriverWait myWait = new WebDriverWait(driver, DefaultTimeOut);
+		myWait.until(ExpectedConditions.visibilityOf(WebElement));
+	}
+	
+	public boolean waitForElementToBeDisappeared(WebDriver driver, By webElement){
+		boolean booleanValue = false;
+		WebDriverWait myWait = new WebDriverWait(driver, 10);
+		booleanValue = myWait.until(ExpectedConditions.invisibilityOfElementLocated(webElement));
+		System.out.println(booleanValue);
+		return booleanValue;
+	}
+	 
+	public void getscreenshot() throws Exception 
+     {
+             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+             FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+ File.separator + "failedScreenshot.png"));
+             Logger.log("Screenshot was captured");
+     }
 
 	public String getTitle(WebDriver driver) {
 		return driver.getTitle();
