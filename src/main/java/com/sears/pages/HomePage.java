@@ -4,12 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.asserts.SoftAssert;
-
 import com.sears.logger.Logger;
 import com.sears.utils.PropertiesUtil;
-
-import junit.framework.Assert;
 
 public class HomePage extends BasePage {
 
@@ -45,6 +41,12 @@ public class HomePage extends BasePage {
 		element.sendKeys(email);
 		element = elementReadyForOperation(this.driver, Password);
 		element.sendKeys(password);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		element = elementReadyForOperation(this.driver, SignInButton);
 		Logger.log("SignIn button was clicked");
 		element.click();
