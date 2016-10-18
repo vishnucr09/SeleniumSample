@@ -5,9 +5,20 @@
     <classes>
       <class name="com.sears.tests.SampleTests">
         <methods>
-          <include name="searchResultsValidations"/>
+          <include name="LoginTest"/>
         </methods>
       </class> <!-- com.sears.tests.SampleTests -->
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.sears.tests.SampleTests">
+        <methods>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="LoginTest" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.sears.tests.SampleTests -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

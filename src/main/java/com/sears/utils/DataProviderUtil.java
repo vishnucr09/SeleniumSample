@@ -12,15 +12,17 @@ import org.testng.annotations.DataProvider;
 public class DataProviderUtil {
 	
 	@DataProvider(name="empDetails")
-	public Object[][] loginData() {
-		Object[][] arrayObject = getExcelData("D:/sampledoc.xls","Sheet1", 2);
+	public static Object[][] loginData() {
+		File excelWorkBook = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator
+				+ "main" + File.separator + "resources" + File.separator + "BookOne.xls");
+		Object[][] arrayObject = getExcelData(excelWorkBook,"Sheet2", 2);
 		return arrayObject;
 	}
 	
-	public String[][] getExcelData(String FilePath,String SheetName, int instances){
+	public static String[][] getExcelData(File excelWorbook,String SheetName, int instances){
 		String[][] userData = null;
 		try {
-			FileInputStream file = new FileInputStream(new File("D:\\BookOne.xls"));
+			FileInputStream file = new FileInputStream(excelWorbook);
 			HSSFWorkbook workbook = new HSSFWorkbook(file);
 			HSSFSheet sheet = workbook.getSheet(SheetName);
 			userData = new String[instances][2];

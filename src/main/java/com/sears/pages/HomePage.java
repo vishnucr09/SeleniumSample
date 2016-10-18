@@ -42,15 +42,27 @@ public class HomePage extends BasePage {
 		element = elementReadyForOperation(this.driver, Password);
 		element.sendKeys(password);
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		element = elementReadyForOperation(this.driver, SignInButton);
 		Logger.log("SignIn button was clicked");
 		element.click();
-		checkLoginSuccessful(element);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		if(waitForElementToBeDisappeared(this.driver, SignInButton)){
+			Logger.log("Login was successful");
+		}
+		else{
+			Logger.log("Login was not successful. Please check the captured screenshot");
+			getscreenshot();
+		}
+			
+		//checkLoginSuccessful(element);
 		return this;
 	}
 
@@ -63,7 +75,7 @@ public class HomePage extends BasePage {
 	}
 	
 	public void checkLoginSuccessful(WebElement element){
-		if(element.isDisplayed()){
+		if(element.isEnabled()){
 			Logger.log("Login Modal wasn't closed");
 			try {
 				getscreenshot();

@@ -5,17 +5,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import com.sears.logger.Logger;
+import com.sears.pages.HomePage;
 import com.sears.utils.PropertiesUtil;
 
 public abstract class BaseTest{
 	
 	protected WebDriver driver;
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup(){
 		Logger.log("-----------------------------Test Started");
 		this.driver = getWebDriver();
@@ -39,12 +42,13 @@ public abstract class BaseTest{
 		return driver;
 	}
 	
-	public void gotoSearsHomePage(){
+	public HomePage gotoSearsHomePage(){
 		Logger.log("Opening Sears Home Page with"+"\n"+"Url: "+PropertiesUtil.getProperty("sears.homepage.url"));
 		driver.get(PropertiesUtil.getProperty("sears.homepage.url"));
+		return new HomePage(this.driver);
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void close(){
 		Logger.log("-----------------------------Test Ended");
 		driver.close();

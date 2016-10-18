@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.sears.logger.Logger;
 import com.sears.pages.HomePage;
 import com.sears.pages.SearchResultsPage;
+import com.sears.utils.DataProviderUtil;
 import com.sears.webdriver.BaseTest;
 
 public class SampleTests extends BaseTest {
@@ -12,20 +13,18 @@ public class SampleTests extends BaseTest {
 	@Test
 	public void searchResultsValidations(){
 		Logger.log("-------Test Started------");
-		this.gotoSearsHomePage();
-		HomePage HomePage = new HomePage(this.driver);
-		SearchResultsPage SearchResultsPage = HomePage.searchFor("Refrigerator");
+		HomePage homePage = this.gotoSearsHomePage();
+		SearchResultsPage SearchResultsPage = homePage.searchFor("Refrigerator");
 		SearchResultsPage.validateSearchUrl();
 		SearchResultsPage.validateSearchResults();
 		Logger.log("-------Test Ended------");
 	}
 	
-	@Test
-	public void LoginTest(){
+	@Test(dataProvider = "empDetails", dataProviderClass = DataProviderUtil.class)
+	public void LoginTest(String username, String password){
 		Logger.log("-------Test Started------");
-		this.gotoSearsHomePage();
-		HomePage HomePage = new HomePage(this.driver);
-		HomePage.SignIn("searstest999@automation.com", "password");
+		HomePage homePage = this.gotoSearsHomePage();
+		homePage.SignIn(username,password);
 		Logger.log("-------Test Ended------");
 	}
 }

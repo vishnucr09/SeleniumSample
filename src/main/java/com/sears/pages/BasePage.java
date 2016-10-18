@@ -1,6 +1,7 @@
 package com.sears.pages;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -27,10 +28,10 @@ public class BasePage {
 	}
 
 	public WebElement elementReadyForOperation(WebDriver driver, final By by) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(DefaultTimeOut, TimeUnit.SECONDS)
+		Wait<WebDriver> myWait = new FluentWait<WebDriver>(driver).withTimeout(DefaultTimeOut, TimeUnit.SECONDS)
 				.pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
-		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+		WebElement element = myWait.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
 				return driver.findElement(by);
 			}
@@ -54,10 +55,15 @@ public class BasePage {
 		return booleanValue;
 	}
 	 
-	public void getscreenshot() throws Exception 
+	public void getscreenshot() 
      {
              File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-             FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+ File.separator + "failedScreenshot.png"));
+             try {
+				FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+ File.separator + "failedScreenshot.png"));
+			} catch (IOException e) {
+				Logger.log("Exception while capturing screenshot");
+				e.printStackTrace();
+			}
              Logger.log("Screenshot was captured");
      }
 

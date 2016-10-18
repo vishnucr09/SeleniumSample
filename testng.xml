@@ -3,9 +3,12 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.sears.tests.SampleTests"/>
+      <class name="com.sears.tests.SampleTests">
       <methods>
+      <exclude name="searchResultsValidations"></exclude>
+      <include name="LoginTest"></include>
       </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
