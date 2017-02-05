@@ -10,7 +10,7 @@ import com.sears.webdriver.BaseTest;
 
 public class SampleTests extends BaseTest {
 	
-	@Test
+	@Test(priority = 2)
 	public void searchResultsValidations(){
 		Logger.log("-------Test Started------");
 		HomePage homePage = this.gotoSearsHomePage();
@@ -20,7 +20,7 @@ public class SampleTests extends BaseTest {
 		Logger.log("-------Test Ended------");
 	}
 	
-	@Test(dataProvider = "empDetails", dataProviderClass = DataProviderUtil.class)
+	@Test(dataProvider = "empDetails", dataProviderClass = DataProviderUtil.class, priority = 1)
 	public void LoginTest(String username, String password){
 		Logger.log("-------Test Started------");
 		HomePage homePage = this.gotoSearsHomePage();

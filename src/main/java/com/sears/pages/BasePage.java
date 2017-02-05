@@ -51,7 +51,6 @@ public class BasePage {
 		boolean booleanValue = false;
 		WebDriverWait myWait = new WebDriverWait(driver, 10);
 		booleanValue = myWait.until(ExpectedConditions.invisibilityOfElementLocated(webElement));
-		System.out.println(booleanValue);
 		return booleanValue;
 	}
 	 
