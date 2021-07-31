@@ -12,7 +12,7 @@ public class HomePage extends BasePage {
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
-		this.NavigateToUSSite();
+		//this.NavigateToUSSite();
 	}
 
 	By NavigateToUSSite = By.id(PropertiesUtil.getProperty("HomePage.NavigateToUSSite"));

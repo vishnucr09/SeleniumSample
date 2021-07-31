@@ -26,7 +26,7 @@ public abstract class BaseTest{
 	
 	public WebDriver getWebDriver(){
 		String driverPathForFirefoxDriver = "D:/Vishnu_Selenium/";
-		String driverPathForChromeDriver = "D:/Vishnu_Selenium/chromedriver_win32/";
+		String driverPathForChromeDriver = "/Users/vishnucr/MyFiles/Vishnu/Projects/Test/";
 		String browser = PropertiesUtil.getProperty("Browser");
 		if(browser.equals("FireFox")){
 			System.setProperty("webdriver.gecko.driver", driverPathForFirefoxDriver+"geckodriver.exe");
@@ -35,7 +35,7 @@ public abstract class BaseTest{
 			Logger.log(PropertiesUtil.getProperty("Browser")+" browser was choose and opened");
 		}
 		else if(browser.equals("Chrome")){
-			System.setProperty("webdriver.chrome.driver", driverPathForChromeDriver+"chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", driverPathForChromeDriver+"chromedriver");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
