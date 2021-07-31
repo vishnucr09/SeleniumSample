@@ -2,3 +2,6 @@
 /test-output/*
 .settings/*
 .classpath
+*.iml
+*.png
+.project
